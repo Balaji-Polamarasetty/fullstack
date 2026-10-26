@@ -1,0 +1,35 @@
+export const quizzes=[
+{id:'web',title:'Web Development',subtitle:'HTML, CSS & React',icon:'⌘',color:'violet',minutes:5,questions:[
+{q:'Which HTML element creates a hyperlink?',o:['<link>','<a>','<href>','<url>'],a:1,e:'The <a> (anchor) element creates a hyperlink. Its href attribute contains the destination.'},
+{q:'Which CSS property changes text color?',o:['font-style','background-color','color','text-decoration'],a:2,e:'The color property sets the foreground color of text.'},
+{q:'Which keyword declares a reassignable block-scoped variable?',o:['const','let','static','define'],a:1,e:'let declares a block-scoped variable that can be reassigned.'},
+{q:'What does CSS stand for?',o:['Creative Style Sheets','Computer Styled Sections','Cascading Style Sheets','Color Styling Syntax'],a:2,e:'CSS stands for Cascading Style Sheets.'},
+{q:'Which React hook manages component state?',o:['useState','useRoute','useStyle','useClass'],a:0,e:'useState adds state to a function component.'},
+{q:'Which attribute provides alternative text for an image?',o:['title','src','alt','caption'],a:2,e:'The alt attribute provides alternative text and improves accessibility.'},
+{q:'Which CSS layout is mainly one-dimensional?',o:['Grid','Flexbox','Float','Table'],a:1,e:'Flexbox arranges items along a row or column.'},
+{q:'What does === compare?',o:['Value after conversion','Only type','Value and type without coercion','Variable names'],a:2,e:'Strict equality compares values without type coercion.'},
+{q:'Which method converts JSON text into a JavaScript value?',o:['JSON.stringify()','JSON.parse()','JSON.object()','JSON.convert()'],a:1,e:'JSON.parse() reads JSON text and returns the corresponding JavaScript value.'},
+{q:'Props are used to pass data between which components?',o:['Parent to child','Child to parent automatically','CSS to HTML','Browser to server'],a:0,e:'Props are inputs passed from a parent component to a child.'}]},
+{id:'js',title:'JavaScript Basics',subtitle:'Core programming concepts',icon:'⚡',color:'amber',minutes:5,questions:[
+{q:'Which value represents intentional absence of an object value?',o:['0','false','null','NaN'],a:2,e:'null commonly represents an intentional absence of a value.'},
+{q:'Which array method transforms each item into a new array?',o:['forEach()','map()','push()','findIndex()'],a:1,e:'map() returns a new array of callback results.'},
+{q:'Which operator means logical AND?',o:['||','!','&&','&>'],a:2,e:'The logical AND operator is &&.'},
+{q:'What is typeof 42?',o:['integer','number','float','numeric'],a:1,e:'JavaScript reports numeric values as number.'},
+{q:'Which method adds an item to the end of an array?',o:['pop()','shift()','unshift()','push()'],a:3,e:'push() appends elements to the end of an array.'},
+{q:'Which syntax creates an arrow function?',o:['function => ()','() => {}','-> ()','func() {}'],a:1,e:'Arrow functions use the => syntax.'},
+{q:'Which statement is used to handle exceptions?',o:['try...catch','if...else','for...of','switch only'],a:0,e:'try...catch lets code handle exceptions.'},
+{q:'Which DOM method selects the first matching element?',o:['document.find()','document.querySelector()','document.getAll()','document.css()'],a:1,e:'querySelector() returns the first element matching a CSS selector.'},
+{q:'What does localStorage store in a browser?',o:['Only functions','Key-value data as strings','Database tables','Only images'],a:1,e:'localStorage stores browser key-value data, with values represented as strings.'},
+{q:'Which keyword declares a constant binding?',o:['let','var','const','fixed'],a:2,e:'const declares a binding that cannot be reassigned.'}]},
+{id:'gk',title:'General Knowledge',subtitle:'Science, geography & facts',icon:'◎',color:'teal',minutes:5,questions:[
+{q:'Which planet is known as the Red Planet?',o:['Venus','Mars','Jupiter','Mercury'],a:1,e:'Mars appears reddish due to iron minerals on its surface.'},
+{q:'What is the chemical formula for water?',o:['CO₂','O₂','H₂O','NaCl'],a:2,e:'A water molecule contains two hydrogen atoms and one oxygen atom.'},
+{q:'Which is the largest ocean on Earth?',o:['Atlantic','Indian','Arctic','Pacific'],a:3,e:'The Pacific Ocean is Earth’s largest ocean basin.'},
+{q:'How many sides does a hexagon have?',o:['Five','Six','Seven','Eight'],a:1,e:'A hexagon is a polygon with six sides.'},
+{q:'Which gas do plants absorb during photosynthesis?',o:['Oxygen','Nitrogen','Carbon dioxide','Hydrogen'],a:2,e:'Plants use carbon dioxide, water and light energy to produce sugars.'},
+{q:'What is the nearest star to Earth?',o:['Sirius','Proxima Centauri','The Sun','Polaris'],a:2,e:'The Sun is the nearest star to Earth.'},
+{q:'Which instrument measures temperature?',o:['Barometer','Thermometer','Anemometer','Altimeter'],a:1,e:'A thermometer measures temperature.'},
+{q:'What is the smallest prime number?',o:['0','1','2','3'],a:2,e:'2 is the smallest prime and the only even prime number.'},
+{q:'Which continent is India part of?',o:['Europe','Asia','Africa','South America'],a:1,e:'India is a country in South Asia.'},
+{q:'What is liquid water changing to vapour called?',o:['Condensation','Freezing','Evaporation','Precipitation'],a:2,e:'Evaporation is the change from liquid to gas at a surface.'}]}];
+export function readStats(){try{return JSON.parse(localStorage.getItem('quizzy-stats'))||{attempts:0,best:0,history:[]}}catch{return{attempts:0,best:0,history:[]}}}
